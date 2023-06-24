@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Account</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="display-2 text-primary text-center">My<i class="fa-solid fa-chart-pie text-secondary"></i>Account
+        </h2>
+        <div class="alert alert-secondary w-100 mt-5 text-center" role="alert" id="balance">
+            Balance: 6000
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <select class="form-select " id="type" aria-label="Default select example">
+                    <option selected>Outcome</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="descrip" placeholder="name@example.com">
+                    <label for="floatingInput">Description</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="amount" placeholder="Password">
+                    <label for="floatingPassword">Ammount</label>
+                </div>
+                <button type="button" class="btn btn-primary w-100 mt-3" onclick="showActionsInTable2()"
+                    id="btn">Add</button>
+            </div>
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="actions">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
